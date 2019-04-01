@@ -1,0 +1,13 @@
+{
+  "name": "on-computer-science",
+  "version": "0.0.1",
+  "description": "Computer science for mortals",
+  "main": "index.js",
+  "repository": "git@github.com:recursive-programmer/on-computer-science.git",
+  "author": "recursive-programmer",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^24.5.0"
+  }
+}
