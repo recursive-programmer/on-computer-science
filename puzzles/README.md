@@ -9,3 +9,7 @@ Welcome to the computer science puzzles section. This part contains common compu
 ### Easy
 
 * [Is Palindrome](./is-palindrome)
+
+### Medium
+
+* [Power Function](./power-function)
