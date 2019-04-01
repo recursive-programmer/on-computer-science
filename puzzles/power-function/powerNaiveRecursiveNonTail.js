@@ -15,26 +15,26 @@
 // Average case - O(n)
 // -----
 
-const power = (x, y) => {
-  // 0 ^ y will always be 0 when y > 0
-  if (x === 0 && y > 0) {
+const power = (base, exponent) => {
+  // 0 ^ exponent will always be 0 when exponent > 0
+  if (base === 0 && exponent > 0) {
     return 0;
   }
 
-  // x ^ 0 will always be 1
-  if (y === 0) {
+  // base ^ 0 will always be 1
+  if (exponent === 0) {
     return 1;
   }
 
-  if (y > 0) {
-    return x * power(x, y - 1);
+  if (exponent > 0) {
+    return base * power(base, exponent - 1);
   }
 
-  if (y < 0) {
-    return (1 / x) * power(x, y + 1);
+  if (exponent < 0) {
+    return (1 / base) * power(base, exponent + 1);
   }
 
-  return x;
+  return base;
 };
 
 module.exports = power;

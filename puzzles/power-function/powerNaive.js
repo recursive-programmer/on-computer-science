@@ -15,35 +15,35 @@
 // Average case - O(n)
 // -----
 
-const power = (x, y) => {
-  // 0 ^ y will always be 0 when y > 0
-  if (x === 0 && y > 0) {
+const power = (base, exponent) => {
+  // 0 ^ exponent will always be 0 when exponent > 0
+  if (base === 0 && exponent > 0) {
     return 0;
   }
 
-  // x ^ 0 will always be 1
-  if (y === 0) {
+  // base ^ 0 will always be 1
+  if (exponent === 0) {
     return 1;
   }
 
   let result;
 
-  if (y > 0) {
-    for (let i = 0; i < y; i++) {
+  if (exponent > 0) {
+    for (let i = 0; i < exponent; i++) {
       if (i === 0) {
-        result = x;
+        result = base;
       } else {
-        result = result * x;
+        result = result * base;
       }
     }
   }
 
-  if (y < 0) {
-    for (let i = y - 1; i < -1; i++) {
-      if (i === y - 1) {
-        result = 1 / x;
+  if (exponent < 0) {
+    for (let i = exponent - 1; i < -1; i++) {
+      if (i === exponent - 1) {
+        result = 1 / base;
       } else {
-        result = result / x;
+        result = result / base;
       }
     }
   }

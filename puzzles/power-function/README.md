@@ -1,6 +1,6 @@
 # Instructions
 
-Make a function `power` (you can use different name casing here) that returns the value of x to the power of y (x^y). Example:
+Make a function `power` (you can use different name casing here) that returns the value of `base` to the power of `exponent` (`base^exponent`). Example:
 
 `power(1, 2)` -> `1`
 

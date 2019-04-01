@@ -15,28 +15,28 @@
 // Average case - O(log(n))
 // -----
 
-const power = (x, y, result = 1) => {
-  // 0 ^ y will always be 0 when y > 0
-  if (x === 0 && y > 0) {
+const power = (base, exponent, result = 1) => {
+  // 0 ^ exponent will always be 0 when exponent > 0
+  if (base === 0 && exponent > 0) {
     return 0;
   }
 
-  // x ^ 0 will always be 1
-  if (y === 0 && result === 1) {
+  // base ^ 0 will always be 1
+  if (exponent === 0 && result === 1) {
     return 1;
   }
 
-  // if y is divisible by 2, we can divide and conquer it out
-  if (y !== 0 && (y % 2 === 0 || y % 2 === -0)) {
-    return power(x, y / 2, result) * power(x, y / 2);
+  // if exponent is divisible by 2, we can divide and conquer it out
+  if (exponent !== 0 && (exponent % 2 === 0 || exponent % 2 === -0)) {
+    return power(base, exponent / 2, result) * power(base, exponent / 2);
   }
 
-  if (y > 0) {
-    return power(x, y - 1, x * result);
+  if (exponent > 0) {
+    return power(base, exponent - 1, base * result);
   }
 
-  if (y < 0) {
-    return power(x, y + 1, result / x);
+  if (exponent < 0) {
+    return power(base, exponent + 1, result / base);
   }
 
   return result;
