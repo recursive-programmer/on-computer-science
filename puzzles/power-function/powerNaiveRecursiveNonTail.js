@@ -33,8 +33,6 @@ const power = (base, exponent) => {
   if (exponent < 0) {
     return (1 / base) * power(base, exponent + 1);
   }
-
-  return base;
 };
 
 module.exports = power;
